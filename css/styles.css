@@ -568,7 +568,6 @@ li {
 
 .ipt-footer {
   display: flex;
-  margin-top: 16px;
   gap: 24px;
 }
 
@@ -602,6 +601,7 @@ li {
 .subscribe {
   margin-left: 80px;
   margin-bottom: 16px;
+  width: 100%;
 }
 
 .button-footer {
@@ -617,6 +617,13 @@ li {
   letter-spacing: 0.04em;
   color: #ffffff;
   cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.button-footer:hover,
+.button-footer:focus {
+  color: #ffffff;
+  background-color: #404bbf;
 }
 
 .plane-wrapper {
@@ -634,11 +641,15 @@ li {
   width: 100%;
   height: 100%;
   z-index: 999;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
     visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.modal-overlay.is-open {
+  opacity: 1;
+  pointer-events: auto;
 }
 
 .modal {
@@ -649,13 +660,10 @@ li {
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12),
     0 2px 1px 0 rgba(0, 0, 0, 0.2);
   padding: 72px 24px 24px 24px;
-  display: flex;
-  flex-direction: column;
-  justify-content: end;
-  align-items: center;
   position: absolute;
   top: 50%;
   left: 50%;
+  transform: translate(-50%, -50%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -666,12 +674,10 @@ li {
   min-width: 24px;
   min-height: 24px;
   border-radius: 50%;
-  padding: 8px;
   border: 1px solid rgba(0, 0, 0, 0.1);
   background-color: #e7e9fc;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  margin-bottom: 24px;
   width: 24px;
   height: 24px;
   align-self: flex-end;
@@ -709,12 +715,9 @@ li {
 
 .modal-form {
   width: 100%;
-  display: flex;
-  flex-direction: column;
 }
 
 .input-wrapper {
-  margin-top: 4px;
   position: relative;
 }
 
@@ -780,7 +783,6 @@ li {
   padding: 8px 16px;
   outline: transparent;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  margin-top: 4px;
   font-weight: 400;
   font-size: 12px;
   line-height: 1.17;
