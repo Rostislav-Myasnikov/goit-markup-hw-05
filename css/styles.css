@@ -824,6 +824,7 @@ textarea {
   line-height: 1.5;
   letter-spacing: 0.04em;
   align-self: center;
+  display: inline-block;
 }
 
 .modal-button:hover,
