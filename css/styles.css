@@ -743,11 +743,6 @@ li {
 .modal-icon {
   fill: #2e2f42;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.icon-wrapper {
-  height: 24px;
-  width: 18px;
   position: absolute;
   top: 50%;
   left: 16px;
@@ -765,13 +760,14 @@ li {
   color: #8e8f99;
   display: block;
   margin-bottom: 4px;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .user-input:focus {
   border: 1px solid #4d5ae5;
 }
 
-.user-input:focus + .icon-wrapper .modal-icon {
+.user-input:focus + .modal-icon {
   fill: #4d5ae5;
 }
 
