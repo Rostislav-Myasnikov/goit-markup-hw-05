@@ -737,6 +737,7 @@ li {
   letter-spacing: 0.04em;
   color: #2e2f42;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  background-color: transparent;
 }
 
 .modal-icon {
@@ -780,19 +781,19 @@ li {
   height: 120px;
   border-radius: 4px;
   border: 1px solid rgba(46, 47, 66, 0.4);
-  padding-bottom: 11px;
-  padding-top: 11px;
-  outline: none;
-  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 8px 16px;
+  outline: transparent;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   margin-top: 4px;
   font-weight: 400;
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.04em;
+  background-color: transparent;
 }
 
 .user-input-comment:hover {
-  border: 1px solid #4d5ae5;
+  border-color: #4d5ae5;
 }
 
 .user-input-comment::placeholder {
@@ -809,7 +810,7 @@ textarea {
 }
 
 .modal-button {
-  width: 169px;
+  min-width: 169px;
   height: 56px;
   color: #ffffff;
   cursor: pointer;
