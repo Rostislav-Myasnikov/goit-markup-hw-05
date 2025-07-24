@@ -880,5 +880,5 @@ input[type="checkbox"]:checked + .policy-label .modal-span {
 }
 
 .wrapper-comment {
-  padding-bottom: 16px;
+  margin-bottom: 16px;
 }
